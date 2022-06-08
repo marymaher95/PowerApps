@@ -1,0 +1,4 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: =Set(currentUserEmail,User().Email);  Set(currentUser,LookUp(Users,'Primary Email'=currentUserEmail))
+

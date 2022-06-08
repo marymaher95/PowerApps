@@ -1,0 +1,24 @@
+BrandingHeader As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =60
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle1 As rectangle:
+        Height: =60
+        Width: =640
+        ZIndex: =1
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =21
+        Text: ="Contoso Hot Desking"
+        Width: =560
+        X: =40
+        ZIndex: =2
+

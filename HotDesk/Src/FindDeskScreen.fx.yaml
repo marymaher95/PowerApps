@@ -1,0 +1,71 @@
+FindDeskScreen As screen:
+
+    BrandingHeader_1 As BrandingHeader:
+
+    FilterLocation As dropdown:
+        Default: =""
+        Height: =70
+        Items: =Locations
+        Size: =21
+        Width: =575
+        X: =32
+        Y: =89
+        ZIndex: =2
+
+    GalleryDesks As gallery.galleryVertical:
+        Height: =797
+        Items: =Filter(Desks,Location.Location = FilterLocation.Selected.Location)
+        Layout: =Layout.Vertical
+        TemplateSize: =118
+        Y: =335
+        ZIndex: =5
+
+        Label2 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Name
+            Width: =560
+            X: =40
+            Y: =15
+            ZIndex: =1
+
+        Icon3 As icon.Add:
+            Icon: =Icon.ChevronRight
+            OnSelect: |
+                =Navigate(ReserveDeskScreen,ScreenTransition.None)
+            X: =523
+            Y: =21
+            ZIndex: =3
+
+    Icon1 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =47
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Locations)
+        Width: =44
+        X: =580
+        Y: =6
+        ZIndex: =6
+
+    Icon4_1 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        X: =15
+        ZIndex: =7
+
+    filterFeatures As combobox:
+        DisplayFields: =["contoso_name"]
+        Height: =70
+        IsSearchable: =false
+        Items: ='Desk Features'
+        SearchFields: =["contoso_name"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =21
+        Width: =575
+        X: =32
+        Y: =199
+        ZIndex: =8
+

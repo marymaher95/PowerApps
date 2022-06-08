@@ -1,0 +1,112 @@
+HomeScreen As screen:
+
+    Rectangle3 As rectangle:
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =101
+        Width: =640
+        Y: =53
+        ZIndex: =1
+
+    BrandingHeader_4 As BrandingHeader:
+        ZIndex: =2
+
+    Icon1_1 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =47
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Users)
+        Width: =44
+        X: =580
+        Y: =6
+        ZIndex: =3
+
+    Label10 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="My Reservations"
+        Width: =560
+        X: =40
+        Y: =72
+        ZIndex: =4
+
+    Gallery5 As gallery.galleryVertical:
+        Height: =818
+        Items: =LookUp(Users,'Primary Email'=currentUserEmail).'Reservations (contoso_Reservation_ReservedFor_SystemUser)'
+        Layout: =Layout.Vertical
+        TemplateSize: =232
+        Y: =157
+        ZIndex: =5
+
+        Label11 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Start
+            Width: =272
+            X: =35
+            Y: =65
+            ZIndex: =1
+
+        Label12 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Name
+            Width: =560
+            X: =35
+            Y: =8
+            ZIndex: =2
+
+        Label13 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =" - " & Text(ThisItem.End,DateTimeFormat.ShortTime)
+            Width: =253
+            X: =301
+            Y: =65
+            ZIndex: =3
+
+        Icon5 As icon.Add:
+            Icon: =Icon.Trash
+            OnSelect: =Remove(Reservations,ThisItem);Refresh(Users)
+            X: =554
+            Y: =8
+            ZIndex: =5
+
+        Rectangle4 As rectangle:
+            Height: =11
+            OnSelect: =Select(Parent)
+            Width: =630
+            Y: =220
+            ZIndex: =6
+
+        Label3 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Description
+            Width: =560
+            X: =40
+            Y: =40
+            ZIndex: =7
+
+    Button2 As button:
+        Height: =70
+        OnSelect: =Navigate(FindDeskScreen)
+        Size: =24
+        Text: ="New Reservation"
+        Width: =280
+        X: =180
+        Y: =1007
+        ZIndex: =6
+
+    Rectangle5 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =31
+        Width: =640
+        Y: =1105
+        ZIndex: =7
+

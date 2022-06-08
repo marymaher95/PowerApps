@@ -1,0 +1,43 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_contoso_location_forms",
+      "Namespace": "Locations (Forms)",
+      "Values": {
+        "Information": "91e4580d-2519-4f75-8d07-f7837ff53610"
+      }
+    },
+    {
+      "Kind": "default.cds_contoso_deskfeature_forms",
+      "Namespace": "Desk Features (Forms)",
+      "Values": {
+        "Information": "fefdb0d4-79e2-4fd5-aa26-8189abbf7024"
+      }
+    },
+    {
+      "Kind": "default.cds_contoso_desk_forms",
+      "Namespace": "Desks (Forms)",
+      "Values": {
+        "Information": "929854ab-f0be-4772-89e2-49d13a6eceb8"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_contoso_reservation_forms",
+      "Namespace": "Reservations (Forms)",
+      "Values": {
+        "Information": "6ba21af9-1a1c-4b23-9c4d-de68ab83a612"
+      }
+    }
+  ]
+}

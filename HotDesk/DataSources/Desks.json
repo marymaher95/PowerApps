@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "contoso_desks",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "contoso_desk",
+    "MaxGetRowsCount": 500,
+    "Name": "Desks",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "contoso_desk_AsyncOperations": "System Jobs",
+      "contoso_desk_BulkDeleteFailures": "Bulk Delete Failures",
+      "contoso_desk_DuplicateBaseRecord": "Duplicate Records (contoso_desk_DuplicateBaseRecord)",
+      "contoso_desk_DuplicateMatchingRecord": "Duplicate Records (contoso_desk_DuplicateMatchingRecord)",
+      "contoso_Desk_Feature": "Desk Features",
+      "contoso_desk_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "contoso_desk_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "contoso_desk_ProcessSession": "Process Sessions",
+      "contoso_desk_SyncErrors": "Sync Errors",
+      "contoso_deskid": "Desk",
+      "contoso_Location": "Location",
+      "contoso_name": "Name",
+      "contoso_Reservation_contoso_Desk": "Reservations",
+      "cr993_contoso_Desk_SystemUser_SystemUser": "Users",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Desks",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Desks (Views)",
+    "Name": "_contoso_desk_views",
+    "RelatedEntityName": "Desks",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "29c77de3-818c-4d86-b078-36a5d0817468": "Desk Advanced Find View",
+      "305a3e58-c481-4e3d-a7f2-fa104b690964": "Desk Lookup View",
+      "59d487ea-415c-4cc6-ace2-4c1ab25a5412": "Active Desks",
+      "e02e7756-f398-404d-a26f-01a81ccae182": "Inactive Desks",
+      "fccf7a1e-bad1-42a8-bb14-7046176e775a": "Desk Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Desks)",
+    "Name": "contoso_desk_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Desks"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Desks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Desks)",
+    "Name": "contoso_desk_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Desks"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Desks",
+    "Type": "OptionSetInfo"
+  }
+]

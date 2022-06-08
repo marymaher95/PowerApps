@@ -1,0 +1,96 @@
+ReserveDeskScreen As screen:
+    OnVisible: =Clear(deskHours);Set(filterStartDate,Blank());Set(filterStartDate,Today())
+
+    BrandingHeader_3 As BrandingHeader:
+
+    Gallery3 As gallery.galleryVertical:
+        Height: =889
+        Items: =deskHours
+        Layout: =Layout.Vertical
+        TemplateSize: =114
+        Y: =197
+        ZIndex: =2
+
+        Label4 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Value
+            Width: =189
+            X: =45
+            Y: =10
+            ZIndex: =1
+
+        Rectangle2 As rectangle:
+            Fill: =If(ThisItem.Busy,Red,Green)
+            Height: =111
+            OnSelect: =Select(Parent)
+            Width: =29
+            ZIndex: =3
+
+        Button1 As button:
+            Height: =70
+            OnSelect: |-
+                =Patch(Reservations,Defaults(Reservations),{Name:"Desk Reservation",Start:ThisItem.Time,End:DateAdd(ThisItem.Time,1,Hours ),Desk:GalleryDesks.Selected,'Reserved For':currentUser});Refresh(Users);Refresh(Desks);Navigate(HomeScreen)
+            Size: =24
+            Text: ="Book"
+            Visible: |
+                =If(ThisItem.Busy,false,true)
+            Width: =145
+            X: =472
+            Y: =20
+            ZIndex: =4
+
+        Label9 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: ="Already Booked"
+            Visible: =If(ThisItem.Busy,true,false)
+            Width: =128
+            X: =472
+            Y: =20
+            ZIndex: =5
+
+    FilterDate As datepicker:
+        DefaultDate: =filterStartDate
+        Height: =70
+        OnChange: |+
+            =ClearCollect(deskRes,ForAll(GalleryDesks.Selected.Reservations,{Start:Start}));
+            ClearCollect(
+                deskHours,
+                ForAll(
+                    Sequence(
+                        10,
+                        8,
+                        1
+                    ),
+                    {
+                        Value: Value & ":00",
+                        Time: DateTimeValue(Text(Self.SelectedDate) & " " & Value & ":00"),
+                        Busy:If(
+                            CountIf(
+                                deskRes,
+                                Start = DateTimeValue(Text(Self.SelectedDate) & " " & Value & ":00")
+                            ) > 0,
+                            true,
+                            false
+                        )
+                    }
+                )
+            );
+            
+        OnSelect: =
+        Size: =24
+        Width: =298
+        X: =32
+        Y: =91
+        ZIndex: =3
+
+    Icon4 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        X: =12
+        ZIndex: =4
+

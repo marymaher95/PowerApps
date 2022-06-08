@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "contoso_deskfeatures",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "contoso_deskfeature",
+    "MaxGetRowsCount": 500,
+    "Name": "Desk Features",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "contoso_Desk_Feature": "Desks",
+      "contoso_deskfeature_AsyncOperations": "System Jobs",
+      "contoso_deskfeature_BulkDeleteFailures": "Bulk Delete Failures",
+      "contoso_deskfeature_DuplicateBaseRecord": "Duplicate Records (contoso_deskfeature_DuplicateBaseRecord)",
+      "contoso_deskfeature_DuplicateMatchingRecord": "Duplicate Records (contoso_deskfeature_DuplicateMatchingRecord)",
+      "contoso_deskfeature_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "contoso_deskfeature_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "contoso_deskfeature_ProcessSession": "Process Sessions",
+      "contoso_deskfeature_SyncErrors": "Sync Errors",
+      "contoso_deskfeatureid": "Desk Feature",
+      "contoso_name": "Name",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Desk Features",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Desk Features (Views)",
+    "Name": "_contoso_deskfeature_views",
+    "RelatedEntityName": "Desk Features",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "14b989b3-7d66-42ab-a6d9-5cdf247df5d2": "Desk Feature Lookup View",
+      "56e87125-171c-443a-8fe1-395d5fc09b94": "Desk Feature Advanced Find View",
+      "8296c71d-5e70-4998-9f39-8cb7744fc88d": "Active Desk Features",
+      "88e4947e-7043-4bca-b211-b0955c26396f": "Inactive Desk Features",
+      "9cabf301-e429-476d-8f2c-7f957138cf19": "Desk Feature Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Desk Features)",
+    "Name": "contoso_deskfeature_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Desk Features"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Desk Features",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Desk Features)",
+    "Name": "contoso_deskfeature_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Desk Features"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Desk Features",
+    "Type": "OptionSetInfo"
+  }
+]

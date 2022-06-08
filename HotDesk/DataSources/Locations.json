@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "contoso_locations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "contoso_location",
+    "MaxGetRowsCount": 500,
+    "Name": "Locations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "contoso_address": "Address",
+      "contoso_location_AsyncOperations": "System Jobs",
+      "contoso_location_BulkDeleteFailures": "Bulk Delete Failures",
+      "contoso_Location_Desk": "Desks",
+      "contoso_location_DuplicateBaseRecord": "Duplicate Records (contoso_location_DuplicateBaseRecord)",
+      "contoso_location_DuplicateMatchingRecord": "Duplicate Records (contoso_location_DuplicateMatchingRecord)",
+      "contoso_location_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "contoso_location_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "contoso_location_ProcessSession": "Process Sessions",
+      "contoso_location_SyncErrors": "Sync Errors",
+      "contoso_locationid": "Location",
+      "contoso_name": "Name",
+      "contoso_phone": "Phone",
+      "contoso_PrimaryContact": "Primary Contact",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Locations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Locations (Views)",
+    "Name": "_contoso_location_views",
+    "RelatedEntityName": "Locations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "6c3a9743-b03b-47d2-888c-0cdedcceb0ec": "Location Associated View",
+      "719f5652-b88b-4d43-8c80-8bed3a0000a8": "Location Advanced Find View",
+      "b0d6ef1c-7be2-4a78-b29a-32cd88db1748": "Inactive Locations",
+      "dce0a889-e280-4f2a-a526-4416be452994": "Location Lookup View",
+      "e1aa8fd0-b7ec-4f8c-8b0d-b72e988bf3e5": "Active Locations"
+    }
+  },
+  {
+    "DisplayName": "Status (Locations)",
+    "Name": "contoso_location_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Locations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Locations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Locations)",
+    "Name": "contoso_location_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Locations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Locations",
+    "Type": "OptionSetInfo"
+  }
+]
